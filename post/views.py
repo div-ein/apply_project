@@ -40,3 +40,10 @@ def delete(request, apply_id):
   apply = Apply.objects.get(id=apply_id)
   apply.delete()
   return redirect('home')
+
+def member(request):
+  applies = Apply.objects
+  return render(request,'member.html',{'applies':applies})
+
+def info(request):
+  return render(request, 'info.html')

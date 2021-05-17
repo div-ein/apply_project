@@ -1,0 +1,23 @@
+.nav {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #00A9DD;
+  color: white;
+}
+
+.nav-link {
+  background-color: #00A9DD;
+  width: 130px;
+  height: 25px;
+  margin: 0px 70px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.create {
+  text-align: center;
+}

@@ -16,23 +16,8 @@
     <div class="nav-link"><a href="{% url 'info' %}">Information</a></div>
   </div>
   <!-- nav -->
-  <div class="detail">
-    <p>{{apply_detail.name}}</p>
-    <p>{{apply_detail.age}}</p>
-    <p>{{apply_detail.body}}</p>
-    <p>{{apply_detail.sex}}</p>
-    <br>
-    <br>
-    <p>{{apply_detail.pub_date}}</p>
+  <div class="music_info">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_0pyGclSurg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <!-- detail -->
-
-<a href="{% url 'update' apply_detail.id %}"><p>수정</p></a>
-<a href="{% url 'delete' apply_detail.id %}"><p>삭제</p></a>
-<a href="{% url 'home' %}">메인으로 가기</a>
-
 </body>
 </html>
-
-
-

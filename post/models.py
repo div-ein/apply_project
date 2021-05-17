@@ -6,7 +6,11 @@ from django.utils import timezone
 class Apply(models.Model):
   name = models.CharField(max_length=10)
   age = models.IntegerField()
-  sex = models.CharField(max_length=5)
+  CHOICES = (
+    ('FEMALE','여성'),
+    ('MALE','남성'),
+  )
+  sex = models.CharField(max_length=30, choices = CHOICES)
   body = models.TextField()
   pub_date = models.DateTimeField('date published', default = timezone.now)
 
