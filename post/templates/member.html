@@ -16,11 +16,15 @@
     <div class="nav-link"><a href="{% url 'info' %}">Information</a></div>
   </div>
   <!-- nav -->
+
   <div class="member">
+    <ul>
     {% for apply in applies.all %}
-      <a href="{% url 'detail' apply.id %}">{{apply.name}}</a>
-      <br><br><br><br><br>
+      <li><a href="{% url 'detail' apply.id %}">{{apply.name}}</a></li>
+      <br><br><br><br>
     {% endfor %}
+    </ul>
   </div>
+  <!-- member -->
 </body>
 </html>

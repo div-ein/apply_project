@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-w4#*w&0&dbmbms)rgx+q^$chd$)bm4fr*+f8tt8q3ho$yf_axe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -75,27 +75,27 @@ WSGI_APPLICATION = 'Apply.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-# import dj_database_url
-
 # DATABASES = {
-#     'default' : {
-#         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'd8o3ahr671gsk8',
-#         'USER':'jtpgzbnwjpuhep',
-#         'PASSWORD' : 'd3fdd943fca58f503b6b00510eb975c9eb56df77f7e0f82f5112f0650276c0d8',
-#         'HOST': 'ec2-52-1-115-6.compute-1.amazonaws.com',
-#         'PORT':'5432',
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+
+import dj_database_url
+
+DATABASES = {
+    'default' : {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8o3ahr671gsk8',
+        'USER':'jtpgzbnwjpuhep',
+        'PASSWORD' : 'd3fdd943fca58f503b6b00510eb975c9eb56df77f7e0f82f5112f0650276c0d8',
+        'HOST': 'ec2-52-1-115-6.compute-1.amazonaws.com',
+        'PORT':'5432',
+    }
+}
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
