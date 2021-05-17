@@ -1,0 +1,12 @@
+<p>{{apply_detail.name}}</p>
+<p>{{apply_detail.age}}</p>
+<p>{{apply_detail.body}}</p>
+<p>{{apply_detail.sex}}</p>
+<br>
+<br>
+<p>{{apply_detail.pub_date}}</p>  
+
+<a href="{% url 'update' apply_detail.id %}"><p>수정</p></a>
+<a href="{% url 'delete' apply_detail.id %}"><p>삭제</p></a>
+
+<a href="{% url 'home' %}">메인으로 가기</a>

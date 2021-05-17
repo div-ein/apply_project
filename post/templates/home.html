@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/style' %}">
+</head>
+<body>
+  {% for apply in applies.all %}
+
+<a href="{% url 'detail' apply.id %}">{{apply.name}}</a>
+<br><br><br><br><br>
+{% endfor %}
+
+<a href="{% url 'create' %}">지원하기</a>
+</body>
+</html>

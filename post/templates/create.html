@@ -1,0 +1,11 @@
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <!-- <p>이름 : </p><input type="text" name="name">
+  <p>나이 : </p><input type="int" name="age">
+  <p>성별 : </p>
+  <input type="radio" name="sex" value="남자">남자
+  <input type="radio" name="sex" value="여자">여자
+  <p>지원 한마디 : </p> <textarea name="body"></textarea> -->
+  <input type="submit" value="제출">
+</form>
