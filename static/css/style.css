@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'twaysky';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'twaysky';
+}
+
+#nav-link:visited, #nav-link:link {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-link:hover {
+  color: #5f7268;
+}
+
+.banner {
+  text-align: center;
+  color: #05b15b;
+  font-size : 30px;
+}
+
 .nav {
   height: 50px;
   display: flex;
@@ -5,12 +31,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #00A9DD;
+  background-color: #05b15b;
   color: white;
 }
 
 .nav-link {
-  background-color: #00A9DD;
+  background-color:#05b15b;
   width: 130px;
   height: 25px;
   margin: 0px 70px;
@@ -18,6 +44,11 @@
   font-weight: 700;
 }
 
-.create {
-  text-align: center;
+.container {
+  margin: 0px 260px;
+}
+
+#members:link, #members:visited {
+  text-decoration: none;
+  color: black;
 }

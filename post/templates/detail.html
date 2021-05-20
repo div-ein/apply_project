@@ -1,38 +1,26 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitnessLife</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-  <div class="nav">
-    <div class="nav-link"><a href="{% url 'home' %}">Home</a></div>
-    <div class="nav-link"><a href="{% url 'member' %}">Member</a></div>
-    <div class="nav-link"><a href="{% url 'create' %}">Apply</a></div>
-    <div class="nav-link"><a href="{% url 'info' %}">Information</a></div>
-  </div>
-  <!-- nav -->
-  <div class="detail">
-    <p>{{apply_detail.name}}</p>
-    <p>{{apply_detail.age}}</p>
-    <p>{{apply_detail.body}}</p>
-    <p>{{apply_detail.sex}}</p>
-    <br>
-    <br>
-    <p>{{apply_detail.pub_date}}</p>
-  </div>
-  <!-- detail -->
+{% extends 'base.html' %}
 
-<a href="{% url 'update' apply_detail.id %}"><p>수정</p></a>
-<a href="{% url 'delete' apply_detail.id %}"><p>삭제</p></a>
-<a href="{% url 'home' %}">메인으로 가기</a>
-
-</body>
-</html>
-
+{% block content %}
+<div class="image">
+  <p><img src="{{ apply_detail.image.url }}" alt="" height="300" width="300"></p>
+</div>
+<!-- image -->
+<div class="detail">
+  <p>성명 : {{apply_detail.name}}</p>
+  <p>나이 : {{apply_detail.age}}</p>
+  <p>성별 : {{apply_detail.sex}}</p>
+  <br>
+  <p>{{apply_detail.body}}</p>
+  <br>
+  <p>{{apply_detail.pub_date}}</p>
+</div>
+<!-- detail -->
+<div class="linkbar">
+<a href="{% url 'update' apply_detail.id %}">수정</a>
+<a href="{% url 'delete' apply_detail.id %}">삭제</a>
+<a href="{% url 'home' %}"><p>메인으로 가기</p></a>
+</div>
+<!-- linkbar -->
+{% endblock %}
 
 

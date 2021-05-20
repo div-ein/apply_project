@@ -13,6 +13,7 @@ class Apply(models.Model):
   sex = models.CharField(max_length=30, choices = CHOICES)
   body = models.TextField()
   pub_date = models.DateTimeField('date published', default = timezone.now)
+  image = models.ImageField(upload_to="post_img/", default='null')
 
   def __str__(self):
     return self.name

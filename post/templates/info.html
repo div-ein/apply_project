@@ -1,27 +1,12 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitnessLife</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-  <div class="nav">
-    <div class="nav-link"><a href="{% url 'home' %}">Home</a></div>
-    <div class="nav-link"><a href="{% url 'member' %}">Member</a></div>
-    <div class="nav-link"><a href="{% url 'create' %}">Apply</a></div>
-    <div class="nav-link"><a href="{% url 'info' %}">Information</a></div>
-  </div>
-  <!-- nav -->
-  <div class="music_info">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_0pyGclSurg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="body_info">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jj6ze_eqmYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</body>
-</html>
+{% block content %}
+<div class="music_info">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_0pyGclSurg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<!-- music_info -->
+<div class="body_info">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jj6ze_eqmYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<!-- body_info -->
+{% endblock %}
