@@ -45,10 +45,27 @@
 }
 
 .container {
-  margin: 0px 260px;
+  margin: 10px 260px;
 }
 
 #members:link, #members:visited {
   text-decoration: none;
   color: black;
+}
+.detailContent {
+  display: flex;
+  justify-content: center;
+}
+.detailImage {
+  margin: 0px 30px;
+  width : 500px;
+}
+.detail {
+  border: 1px solid;
+  width : 500px;
+  margin: 0px 30px;
+}
+
+.linkbar {
+  text-align: right;
 }

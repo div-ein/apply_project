@@ -39,7 +39,7 @@ def update(request,apply_id):
 def delete(request, apply_id):
   apply = Apply.objects.get(id=apply_id)
   apply.delete()
-  return redirect('home')
+  return redirect('member')
 
 def member(request):
   applies = Apply.objects
