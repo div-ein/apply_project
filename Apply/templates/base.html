@@ -18,7 +18,7 @@
     <div class='nav-link'><a href="{% url 'info' %}" id='nav-link'>Information</a></div>
     {% if user.is_authenticated %}
     <div class='nav-link'><a href="{% url 'create' %}" id='nav-link'>Apply</a></div>
-    <div class="nav-link"><a href="{% url 'logout' %}" id='nav-link'>LoginOut</a></div>
+    <div class="nav-link"><a href="{% url 'logout' %}" id='nav-link'>LogOut</a></div>
     {% endif %}
 
     {% if not user.is_authenticated %}

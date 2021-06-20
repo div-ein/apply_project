@@ -26,6 +26,7 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('member',views.member, name='member'),
     path('info', views.info, name='info'),
+    
     path('post/', include('post.urls')),
     path('account/', include('account.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT,}),
