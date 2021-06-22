@@ -26,8 +26,10 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('member',views.member, name='member'),
     path('info', views.info, name='info'),
-    
-    path('post/', include('post.urls')),
+    path('detail/<int:apply_id>', views.detail, name='detail'),
+    path('create',views.create,name='create'),
+    path('update/<int:apply_id>/', views.update, name='update'),
+    path('delete/<int:apply_id>/', views.delete, name='delete'),
     path('account/', include('account.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT,}),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

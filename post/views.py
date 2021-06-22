@@ -29,7 +29,7 @@ def update(request,apply_id):
   if request.method == "POST":
     form = CreatePostForm(request.POST, request.FILES, instance=apply)
     if form.is_valid():
-      apply = apply.save()
+      apply = form.save()
       return redirect('/detail/'+str(apply.id))
     
   else:
